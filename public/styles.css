@@ -1,0 +1,23 @@
+.btn {
+  width: 100px;
+}
+video {
+  display: block;
+  max-width: 100%;
+  border-radius: 1rem;
+}
+.video {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .video {
+    width: 100%;
+    margin: 0;
+  }
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+}

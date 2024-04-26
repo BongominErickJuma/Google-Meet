@@ -1,0 +1,25 @@
+{
+  "name": "google-meet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-apps/meet": "^0.2.0",
+    "@google-cloud/local-auth": "^2.1.0",
+    "@google-cloud/storage": "^7.10.1",
+    "body-parser": "^1.20.2",
+    "bootstrap-icons": "^1.11.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "google-auth-library": "^9.9.0",
+    "googleapis": "^134.0.0",
+    "pg": "^8.11.5"
+  }
+}

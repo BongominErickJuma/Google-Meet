@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/@zegocloud/zego-uikit-prebuilt/zego-uikit-prebuilt.js"></script>
+  <script>
+    const roomID = Math.floor(Math.random() * 10000) + "";
+    const userID = Math.floor(Math.random() * 10000) + "";
+    const userName = "Bongomin" + userID;
+    const appID = 750477888;
+    const serverSecret = "0762adc42c959b96da88e9b28a468d6a";
+    const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
+      appID,
+      serverSecret,
+      roomID,
+      userID,
+      userName
+    );
+
+    const zp = ZegoUIKitPrebuilt.create(TOKEN);
+    zp.joinRoom({
+      container: document.querySelector("#root"),
+      sharedLinks: [
+        {
+          url:
+            window.location.protocol +
+            "//" +
+            window.location.host +
+            window.location.pathname +
+            "?roomID=" +
+            roomID,
+        },
+      ],
+      scenario: {
+        mode: ZegoUIKitPrebuilt.VideoConference,
+      },
+    });
+  </script>
+</html>
