@@ -9,7 +9,7 @@ async function callEndActiveConference(authClient) {
     return;
   }
 
-  let name = meetDetails.meetname;
+  let name = meetDetails.name;
 
   const meetClient = new SpacesServiceClient({
     authClient: authClient,

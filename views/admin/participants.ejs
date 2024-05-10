@@ -1,0 +1,53 @@
+<%- include("../partials/header.ejs") %> <%- include("../partials/navbar.ejs")
+%>
+<div class="col-xxl-8 py-5 mycont">
+  <div class="column justify-content-center">
+    <div class="d-flex column justify-content-center gap-2">
+      <div class="d-flex gap-2 justify-content-center">
+        <form action="/getAllParticipants" method="post">
+          <button
+            class="btn btn-primary d-inline-flex align-items-center justify-content-center"
+            type="submit"
+          >
+            Participants
+          </button>
+        </form>
+      </div>
+
+      <div class="d-flex gap-2 justify-content-center">
+        <form action="/create" method="post">
+          <button
+            class="btn btn-primary d-inline-flex align-items-center justify-content-center"
+            type="submit"
+          >
+            Participant
+          </button>
+        </form>
+      </div>
+      <div class="d-flex gap-2 justify-content-center">
+        <form action="/create" method="post">
+          <button
+            class="btn btn-primary d-inline-flex align-items-center justify-content-center"
+            type="submit"
+          >
+            Sessions
+          </button>
+        </form>
+      </div>
+      <div class="d-flex gap-2 justify-content-center">
+        <form action="/create" method="post">
+          <button
+            class="btn btn-primary d-inline-flex align-items-center justify-content-center"
+            type="submit"
+          >
+            Session
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="video mt-5">
+      <video src="videos/finally.mp4" controls></video>
+    </div>
+  </div>
+</div>
+<%- include("../partials/footer.ejs") %>

@@ -4,29 +4,21 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script>
   $(document).ready(function(){
-    $('.nav-link').click(function(){
-      $('.nav-link').removeClass('active'); // Remove active class from all links
-      $(this).addClass('active'); // Add active class to the clicked link
+    // Get the current URL path
+    var currentPath = window.location.pathname;
+
+    // Loop through each nav link
+    $('.nav-link').each(function() {
+      // Get the href attribute value of the nav link
+      var href = $(this).attr('href');
+
+      // Check if the current path matches the href
+      if (currentPath === href) {
+        // Add the 'active' class to the link
+        $(this).addClass('active');
+      }
     });
-
-    var displayerDiv = $('.displayer');
-
-// Initially hide the displayer div
-displayerDiv.hide();
-
-// Monitor changes in href attribute
-$('.displayer a').on('DOMAttrModified', function(){
-    var href = $(this).attr('href').trim();
-    if(href.length > 0 && href !== "#") {
-        displayerDiv.show(); // Display the parent div if href has a link
-    } else {
-        displayerDiv.hide(); // Hide the parent div if href is empty or "#"
-    }
-});
-
-// Trigger the DOMAttrModified event to check initial href attribute
-$('.displayer a').trigger('DOMAttrModified');
-  })
+  });
 </script>
 </body>
 </html>

@@ -7,7 +7,7 @@ async function callGetSpace(authClient) {
     return;
   }
 
-  let name = meetDetails.meetname;
+  let name = meetDetails.name;
 
   const meetClient = new SpacesServiceClient({
     authClient: authClient,
@@ -20,7 +20,7 @@ async function callGetSpace(authClient) {
 
   // Run request
   const response = await meetClient.getSpace(request);
-  console.log(response);
+  return response;
 }
 
 export default callGetSpace;

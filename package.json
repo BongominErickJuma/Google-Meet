@@ -13,6 +13,7 @@
   "dependencies": {
     "@google-apps/meet": "^0.2.0",
     "@google-cloud/local-auth": "^2.1.0",
+    "@google-cloud/pubsub": "^4.4.0",
     "@google-cloud/storage": "^7.10.1",
     "body-parser": "^1.20.2",
     "bootstrap-icons": "^1.11.3",

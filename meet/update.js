@@ -4,7 +4,7 @@ import { meetDetails } from "../index.js";
 // changing its possible access type
 
 const space = {
-  name: meetDetails.meetname,
+  name: meetDetails.name,
 };
 
 async function callUpdateSpace(authClient) {
